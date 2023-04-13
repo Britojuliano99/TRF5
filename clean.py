@@ -45,7 +45,9 @@ class limpeza():
       palavras=[]
       for w in self.text.split():
           palavras.append(self.stemmer.stem(w))
-      self.texto_stemming= " ".join(palavras)
+      texto_stemming= " ".join(palavras)
+      self.text=texto_stemming
+    
     
     def aplicar_limpeza(self):
       self.remove_header_footer()
